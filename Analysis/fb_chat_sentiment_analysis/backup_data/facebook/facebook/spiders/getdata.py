@@ -64,5 +64,5 @@ class FacebookSpider(scrapy.Spider):
         # df = pd.DataFrame({'Name':})
         # print(sum(self.Name,[]),sum(self.Time,[]),sum(self.Text,[]))
         df = pd.DataFrame({'Name':sum(self.Name,[]),'Text':sum(self.Text,[]),'Time':sum(self.Time,[])})
-        df.to_csv('fb_text.csv')   
+        df.to_csv('fb_text5.csv')   
         yield scrapy.Request(url='https://mbasic.facebook.com'+ old_txt[0], callback=self.parse_convo)
